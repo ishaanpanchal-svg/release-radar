@@ -3,7 +3,7 @@ import { db } from "./db";
 import { AiResultSchema, classifyBatch, type AiResult } from "./gemini";
 import { mergeClassification, MIN_USEFUL_NOTES } from "./classify";
 import { analyzeRelease } from "./rules";
-import { getAdvisoriesInWindow, getReleasesInWindow } from "./github";
+import { advisoryAppliesTo, getAdvisoriesInWindow, getReleasesInWindow } from "./github";
 import type {
   AdvisoryInfo,
   DigestCounts,
@@ -106,7 +106,7 @@ export async function runDigest(opts: { kind: "scheduled" | "manual"; days?: num
       const rels = all.filter((r) => !r.prerelease);
       prereleasesSkipped += all.length - rels.length;
       if (rels.length === 0) quiet.push({ full_name: repo.full_name, html_url: repo.html_url });
-      for (const release of rels) releases.push({ release, advisories });
+      for (const release of rels) releases.push({ release, advisories: advisories.filter((a) => advisoryAppliesTo(a, release)) });
     } catch (err) {
       errors.push({ repo: repo.full_name, message: String((err as Error).message ?? err) });
     }

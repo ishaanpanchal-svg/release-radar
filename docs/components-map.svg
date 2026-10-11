@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1434 1176" width="1434" height="1176" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>Release Radar: components map and deployment</title>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker></defs>
+<rect width="1434" height="1176" fill="#ffffff"/>
+<rect x="0" y="0" width="1434" height="70" fill="#1f2a3a"/>
+<text x="87.5" y="41" text-anchor="middle" font-size="19" fill="#9aa5b5">Actor</text>
+<text x="278.6666666666667" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Trigger</text>
+<text x="486" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Input</text>
+<text x="693.3333333333334" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Context</text>
+<text x="900.6666666666667" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Processing</text>
+<text x="1108" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">AI</text>
+<text x="1315.3333333333335" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Output</text>
+<rect x="175" y="70" width="1259" height="118" fill="#ffffff"/>
+<rect x="0" y="70" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="127" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Vercel Cron</text>
+<text x="87.5" y="153" text-anchor="middle" font-size="18" fill="#aab4c3">Schedule</text>
+<rect x="175" y="188" width="1259" height="118" fill="#f5f3ee"/>
+<rect x="0" y="188" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="245" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Keerthi</text>
+<text x="87.5" y="271" text-anchor="middle" font-size="18" fill="#aab4c3">Dashboard</text>
+<rect x="175" y="306" width="1259" height="118" fill="#ffffff"/>
+<rect x="0" y="306" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="363" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Resend</text>
+<text x="87.5" y="389" text-anchor="middle" font-size="18" fill="#aab4c3">Email</text>
+<rect x="175" y="424" width="1259" height="118" fill="#f5f3ee"/>
+<rect x="0" y="424" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="481" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Supabase</text>
+<text x="87.5" y="507" text-anchor="middle" font-size="18" fill="#aab4c3">Database</text>
+<rect x="175" y="542" width="1259" height="118" fill="#ffffff"/>
+<rect x="0" y="542" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="599" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Server</text>
+<text x="87.5" y="625" text-anchor="middle" font-size="18" fill="#aab4c3">Vercel + rules</text>
+<rect x="175" y="660" width="1259" height="118" fill="#f5f3ee"/>
+<rect x="0" y="660" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="717" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">GitHub</text>
+<text x="87.5" y="743" text-anchor="middle" font-size="18" fill="#aab4c3">Live data</text>
+<rect x="175" y="778" width="1259" height="118" fill="#ffffff"/>
+<rect x="0" y="778" width="175" height="118" fill="#1f2a3a"/>
+<text x="87.5" y="835" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Gemini</text>
+<text x="87.5" y="861" text-anchor="middle" font-size="18" fill="#aab4c3">Flash models</text>
+<line x1="382.33333333333337" y1="70" x2="382.33333333333337" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<line x1="589.6666666666667" y1="70" x2="589.6666666666667" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<line x1="797" y1="70" x2="797" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<line x1="1004.3333333333334" y1="70" x2="1004.3333333333334" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<line x1="1211.6666666666667" y1="70" x2="1211.6666666666667" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<line x1="1404" y1="70" x2="1404" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
+<path d="M370.6666666666667,129 L486,129 L486,677" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M370.6666666666667,247 L486,247 L486,677" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M693.3333333333334,289 L693.3333333333334,441" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M578,719 L601.3333333333334,719" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M785.3333333333334,719 L900.6666666666667,719 L900.6666666666667,643" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M785.3333333333334,483 L900.6666666666667,483 L900.6666666666667,559" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M992.6666666666667,601 L1108,601 L1108,795" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M992.6666666666667,601 L1223.3333333333335,601" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1200,837 L1315.3333333333335,837 L1315.3333333333335,643" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1315.3333333333335,559 L1315.3333333333335,525" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1315.3333333333335,441 L1315.3333333333335,407" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1315.3333333333335,323 L1315.3333333333335,289" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<rect x="186.66666666666669" y="87" width="184" height="84" rx="12" fill="#f3f0ea" stroke="#6b6760" stroke-width="3"/>
+<text x="278.6666666666667" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#33312d">Monday 08:00 IST</text>
+<text x="278.6666666666667" y="149" text-anchor="middle" font-size="15.5" fill="#33312d" opacity="0.85">weekly, automatic</text>
+<rect x="186.66666666666669" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
+<text x="278.6666666666667" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Run now button</text>
+<text x="278.6666666666667" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">any day, any time</text>
+<rect x="601.3333333333334" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
+<text x="693.3333333333334" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Paste a repo link</text>
+<text x="693.3333333333334" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">add / delete, no code</text>
+<rect x="1223.3333333333335" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
+<text x="1315.3333333333335" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Dashboard + inbox</text>
+<text x="1315.3333333333335" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">5-minute scan</text>
+<rect x="1223.3333333333335" y="323" width="184" height="84" rx="12" fill="#fbe9e4" stroke="#a3361c" stroke-width="3"/>
+<text x="1315.3333333333335" y="361" text-anchor="middle" font-size="18" font-weight="700" fill="#6b2412">Weekly email</text>
+<text x="1315.3333333333335" y="385" text-anchor="middle" font-size="15.5" fill="#6b2412" opacity="0.85">red section first</text>
+<rect x="601.3333333333334" y="441" width="184" height="84" rx="12" fill="#e4f5ee" stroke="#0f7a5a" stroke-width="3"/>
+<text x="693.3333333333334" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#0b4f3a">Tracked repo list</text>
+<text x="693.3333333333334" y="503" text-anchor="middle" font-size="15.5" fill="#0b4f3a" opacity="0.85">20+ repos, editable</text>
+<rect x="1223.3333333333335" y="441" width="184" height="84" rx="12" fill="#e4f5ee" stroke="#0f7a5a" stroke-width="3"/>
+<text x="1315.3333333333335" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#0b4f3a">Digest + email log</text>
+<text x="1315.3333333333335" y="503" text-anchor="middle" font-size="15.5" fill="#0b4f3a" opacity="0.85">last email sent at...</text>
+<rect x="808.6666666666667" y="559" width="184" height="84" rx="12" fill="#e6f0fb" stroke="#1f5fa8" stroke-width="3"/>
+<text x="900.6666666666667" y="597" text-anchor="middle" font-size="18" font-weight="700" fill="#123f73">Fixed rules</text>
+<text x="900.6666666666667" y="621" text-anchor="middle" font-size="15.5" fill="#123f73" opacity="0.85">CVE, breaking, filters</text>
+<rect x="1223.3333333333335" y="559" width="184" height="84" rx="12" fill="#e6f0fb" stroke="#1f5fa8" stroke-width="3"/>
+<text x="1315.3333333333335" y="597" text-anchor="middle" font-size="18" font-weight="700" fill="#123f73">Merge + colour</text>
+<text x="1315.3333333333335" y="621" text-anchor="middle" font-size="15.5" fill="#123f73" opacity="0.85">red / yellow / green</text>
+<rect x="394" y="677" width="184" height="84" rx="12" fill="#eeeafc" stroke="#4f46c8" stroke-width="3"/>
+<text x="486" y="715" text-anchor="middle" font-size="18" font-weight="700" fill="#352b8f">Releases + tags</text>
+<text x="486" y="739" text-anchor="middle" font-size="15.5" fill="#352b8f" opacity="0.85">last 7 days only</text>
+<rect x="601.3333333333334" y="677" width="184" height="84" rx="12" fill="#eeeafc" stroke="#4f46c8" stroke-width="3"/>
+<text x="693.3333333333334" y="715" text-anchor="middle" font-size="18" font-weight="700" fill="#352b8f">Security advisories</text>
+<text x="693.3333333333334" y="739" text-anchor="middle" font-size="15.5" fill="#352b8f" opacity="0.85">extra signal</text>
+<rect x="1016" y="795" width="184" height="84" rx="12" fill="#fbebd5" stroke="#9a5a12" stroke-width="3"/>
+<text x="1108" y="833" text-anchor="middle" font-size="18" font-weight="700" fill="#633708">Gemini Flash</text>
+<text x="1108" y="857" text-anchor="middle" font-size="15.5" fill="#633708" opacity="0.85">summary + judgement</text>
+<rect x="0" y="896" width="1434" height="280" fill="#f7f6f2"/>
+<line x1="0" y1="896" x2="1434" y2="896" stroke="#cfcac0" stroke-width="2"/>
+<text x="30" y="932" font-size="22" font-weight="700" fill="#1f2a3a">Where it runs (deployment)</text>
+<rect x="30" y="958" width="300" height="70" rx="10" fill="#f3f0ea" stroke="#6b6760" stroke-width="2.5"/>
+<text x="180" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#33312d">GitHub (public repo)</text>
+<text x="180" y="1011" text-anchor="middle" font-size="14.5" fill="#33312d" opacity="0.85">ishaanpanchal-svg/release-radar</text>
+<path d="M330,993 L390,993" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<text x="360" y="950" text-anchor="middle" font-size="13" fill="#6b6760">push = deploy</text>
+<rect x="390" y="958" width="330" height="70" rx="10" fill="#e6f0fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="555" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#123f73">Vercel (free plan)</text>
+<text x="555" y="1011" text-anchor="middle" font-size="14.5" fill="#123f73" opacity="0.85">release-radar-red.vercel.app</text>
+<path d="M720,993 L780,993" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<text x="750" y="950" text-anchor="middle" font-size="13" fill="#6b6760">reads / writes</text>
+<rect x="780" y="958" width="290" height="70" rx="10" fill="#e4f5ee" stroke="#0f7a5a" stroke-width="2.5"/>
+<text x="925" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#0b4f3a">Supabase (free plan)</text>
+<text x="925" y="1011" text-anchor="middle" font-size="14.5" fill="#0b4f3a" opacity="0.85">repos, digests, digest_items</text>
+<rect x="1100" y="958" width="300" height="70" rx="10" fill="#eeeafc" stroke="#4f46c8" stroke-width="2.5"/>
+<text x="1250" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#352b8f">External services</text>
+<text x="1250" y="1011" text-anchor="middle" font-size="14.5" fill="#352b8f" opacity="0.85">GitHub API, Gemini Flash, Resend</text>
+<text x="30" y="1056" font-size="15" fill="#33312d"><tspan font-weight="700">Schedule:</tspan> vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. The route needs CRON_SECRET and will not send twice in one week.</text>
+<text x="30" y="1078" font-size="15" fill="#33312d"><tspan font-weight="700">AI:</tspan> every AI call is a Gemini Flash model (3.8, 3.7, 3.6, 3.5, then Flash-Lite). Free tier is 20 calls/day per model, so answers are cached per release.</text>
+<text x="30" y="1100" font-size="15" fill="#33312d"><tspan font-weight="700">Safe to be wrong:</tspan> anything the AI or the rules disagree on is shown with a 'not sure' badge and is never green. If Gemini is down, rules still flag security and breaking.</text>
+<text x="30" y="1122" font-size="15" fill="#33312d"><tspan font-weight="700">Left out on purpose:</tspan> issues, pull requests, comments, commits and alpha/beta/rc builds. The dashboard is public by design (no login).</text>
+<text x="30" y="1144" font-size="15" fill="#33312d"><tspan font-weight="700">Not built:</tspan> Slack or Telegram delivery, per-user accounts, a custom sending domain (Resend free plan sends only to the signed-up address).</text>
+<text x="717" y="1168" text-anchor="middle" font-size="16" fill="#6b6760">Release Radar: components map and deployment</text>
+</svg>

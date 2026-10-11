@@ -86,4 +86,6 @@ export interface AdvisoryInfo {
   severity: string | null;
   summary: string;
   url: string;
+  /** Versions the advisory says contain the fix, as text (for example "4.13.11"). */
+  patched: string[];
 }

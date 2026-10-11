@@ -93,7 +93,7 @@ const MAX_BODY_CHARS = 60000;
 
 /** GitHub's own "pre-release" flag is often forgotten, so the tag name is checked too (alpha, beta, rc, canary, ...). */
 export function isPrereleaseTag(tag: string): boolean {
-  return /[-.](alpha|beta|rc|canary|next|dev|preview|nightly|snapshot|insiders|experimental)\b/i.test(tag) || /\d(a|b|rc)\d+$/i.test(tag);
+  return /[-.](alpha|beta|rc|canary|next|dev|preview|nightly|snapshot|insiders|experimental)(?![a-z])/i.test(tag) || /\d(a|b|rc)\d+$/i.test(tag);
 }
 
 export async function getReleasesInWindow(fullName: string, since: Date, until: Date): Promise<RawRelease[]> {
@@ -164,6 +164,7 @@ export async function getAdvisoriesInWindow(fullName: string, since: Date, until
         summary: string;
         html_url: string;
         published_at: string | null;
+        vulnerabilities?: { patched_versions: string | null }[];
       }[]
     >(`/repos/${fullName}/security-advisories?state=published&per_page=20`);
     return list
@@ -174,8 +175,26 @@ export async function getAdvisoriesInWindow(fullName: string, since: Date, until
         severity: a.severity,
         summary: a.summary,
         url: a.html_url,
+        patched: (a.vulnerabilities ?? []).map((v) => v.patched_versions ?? "").filter(Boolean),
       }));
   } catch {
     return [];
   }
+}
+
+const VERSION = /\d+\.\d+\.\d+/g;
+
+/**
+ * An advisory belongs to a release only if the release notes name it (GHSA or CVE id) or the release is the
+ * version the advisory says contains the fix. Without this, one advisory would mark every release of a monorepo red.
+ */
+export function advisoryAppliesTo(a: AdvisoryInfo, release: Pick<RawRelease, "tag" | "body">): boolean {
+  const body = release.body.toLowerCase();
+  if (body.includes(a.ghsaId.toLowerCase())) return true;
+  if (a.cveId && body.includes(a.cveId.toLowerCase())) return true;
+  const tagVersion = release.tag.match(/(\d+\.\d+\.\d+)(?![\d.])/)?.[1];
+  if (!tagVersion) return false;
+  // Monorepo package tags look like "@scope/pkg@1.0.1"; the advisory version belongs to the main package.
+  if (/^@?[\w.-]+\/[\w.-]+@/.test(release.tag) || /^[\w.-]+@\d/.test(release.tag)) return false;
+  return a.patched.some((p) => (p.match(VERSION) ?? ([] as string[])).includes(tagVersion));
 }
