@@ -127,7 +127,7 @@ chip(1100, cy1, 300, ch, "purple", "External services", "GitHub API, Gemini Flas
 const ly = by + 160;
 const note = (y, bold, text) => out(`<text x="30" y="${y}" font-size="15" fill="#33312d"><tspan font-weight="700">${esc(bold)}</tspan> ${esc(text)}</text>`);
 note(ly, "Schedule:", "vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. The route needs CRON_SECRET and will not send twice in one week.");
-note(ly + 22, "AI:", "every AI call is a Gemini Flash model (3.8, 3.7, 3.6, 3.5, then Flash-Lite). Free tier is 20 calls/day per model, so answers are cached per release.");
+note(ly + 22, "AI:", "every AI call is a Gemini Flash model (3.8, then 3.7, 3.6, 3.5 if one runs out). Free tier is 20 calls/day per model, so answers are cached per release.");
 note(ly + 44, "Safe to be wrong:", "anything the AI or the rules disagree on is shown with a 'not sure' badge and is never green. If Gemini is down, rules still flag security and breaking.");
 note(ly + 66, "Left out on purpose:", "issues, pull requests, comments, commits and alpha/beta/rc builds. The dashboard is public by design (no login).");
 note(ly + 88, "Not built:", "Slack or Telegram delivery, per-user accounts, a custom sending domain (Resend free plan sends only to the signed-up address).");

@@ -112,7 +112,7 @@
 <text x="1250" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#352b8f">External services</text>
 <text x="1250" y="1011" text-anchor="middle" font-size="14.5" fill="#352b8f" opacity="0.85">GitHub API, Gemini Flash, Resend</text>
 <text x="30" y="1056" font-size="15" fill="#33312d"><tspan font-weight="700">Schedule:</tspan> vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. The route needs CRON_SECRET and will not send twice in one week.</text>
-<text x="30" y="1078" font-size="15" fill="#33312d"><tspan font-weight="700">AI:</tspan> every AI call is a Gemini Flash model (3.8, 3.7, 3.6, 3.5, then Flash-Lite). Free tier is 20 calls/day per model, so answers are cached per release.</text>
+<text x="30" y="1078" font-size="15" fill="#33312d"><tspan font-weight="700">AI:</tspan> every AI call is a Gemini Flash model (3.8, then 3.7, 3.6, 3.5 if one runs out). Free tier is 20 calls/day per model, so answers are cached per release.</text>
 <text x="30" y="1100" font-size="15" fill="#33312d"><tspan font-weight="700">Safe to be wrong:</tspan> anything the AI or the rules disagree on is shown with a 'not sure' badge and is never green. If Gemini is down, rules still flag security and breaking.</text>
 <text x="30" y="1122" font-size="15" fill="#33312d"><tspan font-weight="700">Left out on purpose:</tspan> issues, pull requests, comments, commits and alpha/beta/rc builds. The dashboard is public by design (no login).</text>
 <text x="30" y="1144" font-size="15" fill="#33312d"><tspan font-weight="700">Not built:</tspan> Slack or Telegram delivery, per-user accounts, a custom sending domain (Resend free plan sends only to the signed-up address).</text>
