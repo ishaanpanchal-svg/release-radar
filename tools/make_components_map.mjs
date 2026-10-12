@@ -30,37 +30,41 @@ const cy = (r) => HEAD + LANE * (r + 0.5);
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
 const boxes = {
-  cron: { c: 0, r: 0, col: "grey", a: "Monday 08:00 IST", b: "weekly, automatic" },
+  cron: { c: 0, r: 0, col: "grey", a: "Monday 08:00 IST", b: "weekly, within the hour" },
   run: { c: 0, r: 1, col: "lime", a: "Run now button", b: "any day, any time" },
   edit: { c: 2, r: 1, col: "lime", a: "Paste a repo link", b: "add / delete, no code" },
-  inbox: { c: 5, r: 1, col: "lime", a: "Dashboard + inbox", b: "5-minute scan" },
+  dash: { c: 4, r: 1, col: "lime", a: "Dashboard", b: "reads the saved digest" },
+  inbox: { c: 5, r: 1, col: "lime", a: "Email inbox", b: "5-minute scan" },
   email: { c: 5, r: 2, col: "red", a: "Weekly email", b: "red section first" },
   repos: { c: 2, r: 3, col: "green", a: "Tracked repo list", b: "20+ repos, editable" },
   db: { c: 5, r: 3, col: "green", a: "Digest + email log", b: "last email sent at..." },
+  start: { c: 1, r: 4, col: "blue", a: "Start a run", b: "reads repo list first" },
   rules: { c: 3, r: 4, col: "blue", a: "Fixed rules", b: "CVE, breaking, filters" },
   merge: { c: 5, r: 4, col: "blue", a: "Merge + colour", b: "red / yellow / green" },
-  gh: { c: 1, r: 5, col: "purple", a: "Releases + tags", b: "last 7 days only" },
-  adv: { c: 2, r: 5, col: "purple", a: "Security advisories", b: "extra signal" },
+  gh: { c: 1, r: 5, col: "purple", a: "GitHub API", b: "releases + advisories" },
+  prompt: { c: 2, r: 6, col: "orange", a: "Brief for Gemini", b: "Keerthi's world, colours" },
   ai: { c: 4, r: 6, col: "orange", a: "Gemini Flash", b: "summary + judgement" },
 };
 
-// [from, fromSide, to, toSide, mode]  modes: h, v straight; hv = horizontal then vertical
+// [from, fromSide, to, toSide, mode]  modes: h, v straight; hv = horizontal then vertical; vh = vertical then horizontal
 const arrows = [
-  ["cron", "r", "gh", "t", "hv"],
-  ["run", "r", "gh", "t", "hv"],
+  ["cron", "r", "start", "t", "hv"],
+  ["run", "r", "start", "t", "hv"],
   ["edit", "b", "repos", "t", "v"],
-  ["gh", "r", "adv", "l", "h"],
-  ["adv", "r", "rules", "b", "hv"],
-  ["repos", "r", "rules", "t", "hv"],
-  ["rules", "r", "ai", "t", "hv"],
+  ["repos", "b", "start", "r", "vh"],
+  ["start", "b", "gh", "t", "v"],
+  ["gh", "r", "rules", "b", "hv"],
+  ["gh", "r", "ai", "t", "hv"],
+  ["prompt", "r", "ai", "l", "h"],
   ["rules", "r", "merge", "l", "h"],
   ["ai", "r", "merge", "b", "hv"],
   ["merge", "t", "db", "b", "v"],
   ["db", "t", "email", "b", "v"],
   ["email", "t", "inbox", "b", "v"],
+  ["db", "l", "dash", "b", "hv"],
 ];
 
-const BAND = 280;
+const BAND = 312;
 const H = HEAD + LANE * lanes.length + BAND;
 let s = "";
 const out = (x) => (s += x + "\n");
@@ -91,7 +95,12 @@ const edge = (b, side) => {
 };
 arrows.forEach(([f, fs_, t, ts, mode]) => {
   const p = edge(boxes[f], fs_), q = edge(boxes[t], ts);
-  const d = mode === "hv" ? `M${p[0]},${p[1]} L${q[0]},${p[1]} L${q[0]},${q[1]}` : `M${p[0]},${p[1]} L${q[0]},${q[1]}`;
+  const d =
+    mode === "hv"
+      ? `M${p[0]},${p[1]} L${q[0]},${p[1]} L${q[0]},${q[1]}`
+      : mode === "vh"
+        ? `M${p[0]},${p[1]} L${p[0]},${q[1]} L${q[0]},${q[1]}`
+        : `M${p[0]},${p[1]} L${q[0]},${q[1]}`;
   out(`<path d="${d}" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>`);
 });
 
@@ -126,10 +135,11 @@ chip(1100, cy1, 300, ch, "purple", "External services", "GitHub API, Gemini Flas
 
 const ly = by + 160;
 const note = (y, bold, text) => out(`<text x="30" y="${y}" font-size="15" fill="#33312d"><tspan font-weight="700">${esc(bold)}</tspan> ${esc(text)}</text>`);
-note(ly, "Schedule:", "vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. The route needs CRON_SECRET and will not send twice in one week.");
+note(ly, "Schedule:", "vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. Vercel's free plan may fire it any time in that hour (the first real run was at 08:55). Needs CRON_SECRET; never sends twice in one week.");
+note(ly + 110, "How the judging works:", "the fixed rules and Gemini each read the same release notes on their own. Only the Merge step combines their answers.");
 note(ly + 22, "AI:", "every AI call is a Gemini Flash model (3.8, then 3.7, 3.6, 3.5 if one runs out). Free tier is 20 calls/day per model, so answers are cached per release.");
 note(ly + 44, "Safe to be wrong:", "anything the AI or the rules disagree on is shown with a 'not sure' badge and is never green. If Gemini is down, rules still flag security and breaking.");
-note(ly + 66, "Left out on purpose:", "issues, pull requests, comments, commits and alpha/beta/rc builds. The dashboard is public by design (no login).");
+note(ly + 66, "Left out on purpose:", "issues, pull requests, comments, commit lists and alpha/beta/rc builds. The dashboard is public by design (no login).");
 note(ly + 88, "Not built:", "Slack or Telegram delivery, per-user accounts, a custom sending domain (Resend free plan sends only to the signed-up address).");
 out(`<text x="${W / 2}" y="${H - 8}" text-anchor="middle" font-size="16" fill="#6b6760">Release Radar: components map and deployment</text>`);
 out("</svg>");

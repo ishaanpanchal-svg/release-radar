@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1434 1176" width="1434" height="1176" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1434 1208" width="1434" height="1208" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <title>Release Radar: components map and deployment</title>
 <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker></defs>
-<rect width="1434" height="1176" fill="#ffffff"/>
+<rect width="1434" height="1208" fill="#ffffff"/>
 <rect x="0" y="0" width="1434" height="70" fill="#1f2a3a"/>
 <text x="87.5" y="41" text-anchor="middle" font-size="19" fill="#9aa5b5">Actor</text>
 <text x="278.6666666666667" y="43" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">Trigger</text>
@@ -44,29 +44,34 @@
 <line x1="1004.3333333333334" y1="70" x2="1004.3333333333334" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
 <line x1="1211.6666666666667" y1="70" x2="1211.6666666666667" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
 <line x1="1404" y1="70" x2="1404" y2="896" stroke="#d9d5cc" stroke-width="1.5"/>
-<path d="M370.6666666666667,129 L486,129 L486,677" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
-<path d="M370.6666666666667,247 L486,247 L486,677" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M370.6666666666667,129 L486,129 L486,559" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M370.6666666666667,247 L486,247 L486,559" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M693.3333333333334,289 L693.3333333333334,441" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
-<path d="M578,719 L601.3333333333334,719" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
-<path d="M785.3333333333334,719 L900.6666666666667,719 L900.6666666666667,643" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
-<path d="M785.3333333333334,483 L900.6666666666667,483 L900.6666666666667,559" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
-<path d="M992.6666666666667,601 L1108,601 L1108,795" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M693.3333333333334,525 L693.3333333333334,601 L578,601" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M486,643 L486,677" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M578,719 L900.6666666666667,719 L900.6666666666667,643" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M578,719 L1108,719 L1108,795" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M785.3333333333334,837 L1016,837" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M992.6666666666667,601 L1223.3333333333335,601" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M1200,837 L1315.3333333333335,837 L1315.3333333333335,643" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M1315.3333333333335,559 L1315.3333333333335,525" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M1315.3333333333335,441 L1315.3333333333335,407" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <path d="M1315.3333333333335,323 L1315.3333333333335,289" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M1223.3333333333335,483 L1108,483 L1108,289" fill="none" stroke="#6b7280" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#ah)"/>
 <rect x="186.66666666666669" y="87" width="184" height="84" rx="12" fill="#f3f0ea" stroke="#6b6760" stroke-width="3"/>
 <text x="278.6666666666667" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#33312d">Monday 08:00 IST</text>
-<text x="278.6666666666667" y="149" text-anchor="middle" font-size="15.5" fill="#33312d" opacity="0.85">weekly, automatic</text>
+<text x="278.6666666666667" y="149" text-anchor="middle" font-size="15.5" fill="#33312d" opacity="0.85">weekly, within the hour</text>
 <rect x="186.66666666666669" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
 <text x="278.6666666666667" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Run now button</text>
 <text x="278.6666666666667" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">any day, any time</text>
 <rect x="601.3333333333334" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
 <text x="693.3333333333334" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Paste a repo link</text>
 <text x="693.3333333333334" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">add / delete, no code</text>
+<rect x="1016" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
+<text x="1108" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Dashboard</text>
+<text x="1108" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">reads the saved digest</text>
 <rect x="1223.3333333333335" y="205" width="184" height="84" rx="12" fill="#e8f4dc" stroke="#3f7a12" stroke-width="3"/>
-<text x="1315.3333333333335" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Dashboard + inbox</text>
+<text x="1315.3333333333335" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#264d0a">Email inbox</text>
 <text x="1315.3333333333335" y="267" text-anchor="middle" font-size="15.5" fill="#264d0a" opacity="0.85">5-minute scan</text>
 <rect x="1223.3333333333335" y="323" width="184" height="84" rx="12" fill="#fbe9e4" stroke="#a3361c" stroke-width="3"/>
 <text x="1315.3333333333335" y="361" text-anchor="middle" font-size="18" font-weight="700" fill="#6b2412">Weekly email</text>
@@ -77,6 +82,9 @@
 <rect x="1223.3333333333335" y="441" width="184" height="84" rx="12" fill="#e4f5ee" stroke="#0f7a5a" stroke-width="3"/>
 <text x="1315.3333333333335" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#0b4f3a">Digest + email log</text>
 <text x="1315.3333333333335" y="503" text-anchor="middle" font-size="15.5" fill="#0b4f3a" opacity="0.85">last email sent at...</text>
+<rect x="394" y="559" width="184" height="84" rx="12" fill="#e6f0fb" stroke="#1f5fa8" stroke-width="3"/>
+<text x="486" y="597" text-anchor="middle" font-size="18" font-weight="700" fill="#123f73">Start a run</text>
+<text x="486" y="621" text-anchor="middle" font-size="15.5" fill="#123f73" opacity="0.85">reads repo list first</text>
 <rect x="808.6666666666667" y="559" width="184" height="84" rx="12" fill="#e6f0fb" stroke="#1f5fa8" stroke-width="3"/>
 <text x="900.6666666666667" y="597" text-anchor="middle" font-size="18" font-weight="700" fill="#123f73">Fixed rules</text>
 <text x="900.6666666666667" y="621" text-anchor="middle" font-size="15.5" fill="#123f73" opacity="0.85">CVE, breaking, filters</text>
@@ -84,15 +92,15 @@
 <text x="1315.3333333333335" y="597" text-anchor="middle" font-size="18" font-weight="700" fill="#123f73">Merge + colour</text>
 <text x="1315.3333333333335" y="621" text-anchor="middle" font-size="15.5" fill="#123f73" opacity="0.85">red / yellow / green</text>
 <rect x="394" y="677" width="184" height="84" rx="12" fill="#eeeafc" stroke="#4f46c8" stroke-width="3"/>
-<text x="486" y="715" text-anchor="middle" font-size="18" font-weight="700" fill="#352b8f">Releases + tags</text>
-<text x="486" y="739" text-anchor="middle" font-size="15.5" fill="#352b8f" opacity="0.85">last 7 days only</text>
-<rect x="601.3333333333334" y="677" width="184" height="84" rx="12" fill="#eeeafc" stroke="#4f46c8" stroke-width="3"/>
-<text x="693.3333333333334" y="715" text-anchor="middle" font-size="18" font-weight="700" fill="#352b8f">Security advisories</text>
-<text x="693.3333333333334" y="739" text-anchor="middle" font-size="15.5" fill="#352b8f" opacity="0.85">extra signal</text>
+<text x="486" y="715" text-anchor="middle" font-size="18" font-weight="700" fill="#352b8f">GitHub API</text>
+<text x="486" y="739" text-anchor="middle" font-size="15.5" fill="#352b8f" opacity="0.85">releases + advisories</text>
+<rect x="601.3333333333334" y="795" width="184" height="84" rx="12" fill="#fbebd5" stroke="#9a5a12" stroke-width="3"/>
+<text x="693.3333333333334" y="833" text-anchor="middle" font-size="18" font-weight="700" fill="#633708">Brief for Gemini</text>
+<text x="693.3333333333334" y="857" text-anchor="middle" font-size="15.5" fill="#633708" opacity="0.85">Keerthi's world, colours</text>
 <rect x="1016" y="795" width="184" height="84" rx="12" fill="#fbebd5" stroke="#9a5a12" stroke-width="3"/>
 <text x="1108" y="833" text-anchor="middle" font-size="18" font-weight="700" fill="#633708">Gemini Flash</text>
 <text x="1108" y="857" text-anchor="middle" font-size="15.5" fill="#633708" opacity="0.85">summary + judgement</text>
-<rect x="0" y="896" width="1434" height="280" fill="#f7f6f2"/>
+<rect x="0" y="896" width="1434" height="312" fill="#f7f6f2"/>
 <line x1="0" y1="896" x2="1434" y2="896" stroke="#cfcac0" stroke-width="2"/>
 <text x="30" y="932" font-size="22" font-weight="700" fill="#1f2a3a">Where it runs (deployment)</text>
 <rect x="30" y="958" width="300" height="70" rx="10" fill="#f3f0ea" stroke="#6b6760" stroke-width="2.5"/>
@@ -111,10 +119,11 @@
 <rect x="1100" y="958" width="300" height="70" rx="10" fill="#eeeafc" stroke="#4f46c8" stroke-width="2.5"/>
 <text x="1250" y="987" text-anchor="middle" font-size="17" font-weight="700" fill="#352b8f">External services</text>
 <text x="1250" y="1011" text-anchor="middle" font-size="14.5" fill="#352b8f" opacity="0.85">GitHub API, Gemini Flash, Resend</text>
-<text x="30" y="1056" font-size="15" fill="#33312d"><tspan font-weight="700">Schedule:</tspan> vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. The route needs CRON_SECRET and will not send twice in one week.</text>
+<text x="30" y="1056" font-size="15" fill="#33312d"><tspan font-weight="700">Schedule:</tspan> vercel.json cron 30 2 * * 1 = Monday 02:30 UTC = 08:00 IST. Vercel's free plan may fire it any time in that hour (the first real run was at 08:55). Needs CRON_SECRET; never sends twice in one week.</text>
+<text x="30" y="1166" font-size="15" fill="#33312d"><tspan font-weight="700">How the judging works:</tspan> the fixed rules and Gemini each read the same release notes on their own. Only the Merge step combines their answers.</text>
 <text x="30" y="1078" font-size="15" fill="#33312d"><tspan font-weight="700">AI:</tspan> every AI call is a Gemini Flash model (3.8, then 3.7, 3.6, 3.5 if one runs out). Free tier is 20 calls/day per model, so answers are cached per release.</text>
 <text x="30" y="1100" font-size="15" fill="#33312d"><tspan font-weight="700">Safe to be wrong:</tspan> anything the AI or the rules disagree on is shown with a 'not sure' badge and is never green. If Gemini is down, rules still flag security and breaking.</text>
-<text x="30" y="1122" font-size="15" fill="#33312d"><tspan font-weight="700">Left out on purpose:</tspan> issues, pull requests, comments, commits and alpha/beta/rc builds. The dashboard is public by design (no login).</text>
+<text x="30" y="1122" font-size="15" fill="#33312d"><tspan font-weight="700">Left out on purpose:</tspan> issues, pull requests, comments, commit lists and alpha/beta/rc builds. The dashboard is public by design (no login).</text>
 <text x="30" y="1144" font-size="15" fill="#33312d"><tspan font-weight="700">Not built:</tspan> Slack or Telegram delivery, per-user accounts, a custom sending domain (Resend free plan sends only to the signed-up address).</text>
-<text x="717" y="1168" text-anchor="middle" font-size="16" fill="#6b6760">Release Radar: components map and deployment</text>
+<text x="717" y="1200" text-anchor="middle" font-size="16" fill="#6b6760">Release Radar: components map and deployment</text>
 </svg>
